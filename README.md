@@ -1,3 +1,18 @@
-<!-- START OF ALTCRAFT PIXEL CODE !-->
-<script type="text/javascript">!function(){var e={url:"https://pxl.alexander-nemtsev.dev.altkraft.com/pixel?k=34FyFph%2BVuzFYrhPh7C10LKGAC08z3lrm%2Fqui6fGQJa6XD9SM9jghQ%3D%3D&s=qpH7UKN%2BkZA%3D",goals:"",value:parseFloat("0"),timeout:parseInt("0"),after_scroll:JSON.parse("false"),auto_load:JSON.parse("true")},o=function(o,t,n,a){var d=[].concat(o).map(function(e){return encodeURIComponent(e)}).join(","),c=encodeURIComponent(String(t||0)),i=encodeURIComponent(n.matching_mode||""),r=encodeURIComponent(n.db_id||0),u=encodeURIComponent(JSON.stringify(n.match||{})),l=encodeURIComponent(JSON.stringify(n.update||{}));setTimeout(function(){(new Image).src=[e.url,"goals="+d,"value="+c,"db_id="+r,"mmode="+i,"match="+u,"update="+l].join("&")},a)},t=!1,n=function(){t||(t=!0,e.after_scroll?document.addEventListener("scroll",function(){(window.pageYOffset||document.documentElement.scrollTop>0)&&o(e.goals,e.value,{},e.timeout)}):e.auto_load&&o(e.goals,e.value,{},e.timeout))};"complete"===document.readyState||"interactive"===document.readyState?n():window.addEventListener("load",n);window.ak_pixel_push=function(e,t,n,a,d,c){var i=[];Array.isArray(e)?i=e:i[0]=e,o(i,t,{match:n,update:a,matching_mode:d,db_id:c},0)}}();</script>
-<!-- END OF ALTCRAFT PIXEL CODE !-->
+
+Для использования firebase пушей необходимо подключить на страницах сайта скрипт
+firebase-messaging.js и firebase-app.js актуальной версии:
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+
+Файлы ak-push.js и manifest.json необходимо подключить к страницам сайта, на
+которых планируется показ пользователям предложение подписаться на push-оповещения:
+
+<script type="text/javascript" src="/ak-push.js"></script>
+<link rel="manifest" href="/manifest.json"></link>
+
+К файлу service-worker.js необходимо обеспечить доступ через корневую директорию сайта:
+
+https://example.com/service-worker.js
+
+ВАЖНО! Данный Toolkit необходимо обновлять после каждого изменения push-опций ресурса!
