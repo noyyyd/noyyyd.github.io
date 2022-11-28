@@ -8,16 +8,15 @@
 <body>
     <button id="init_sub">TEST PIXEL на уведомления</button>
 <script>
-
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush();
-        
-        akPush.initSubscription({ email: 'test_safari@ru.ru' }) // ..показать форму подписки
+        akPush.initSubscription() // ..показать форму подписки
         }
     catch (e) {
         console.log(e); // Или записать ошибку в консоль браузера
         }
+    });
     });
 </script>
                         
