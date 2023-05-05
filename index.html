@@ -6,17 +6,16 @@
     <script src="https://pxl.alexander-nemtsev.dev.altkraft.com/ak_container.js?id=MXwxMw.." ></script>
 </head>
 <body>
-    <button id="init_sub">TEST PIXEL на уведомления</button>
+ <button id="init_sub">TEST PIXEL на уведомления</button>
  <script>
     document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
     try {
         var akPush = new AKPush();
 
-        akPush.initSubscription({email: 'alexander.nemtsev@altcraft.com'}) // ..показать форму подписки
-          }
-    catch (e) {
+        akPush.initSubscription() // ..показать форму подписки
+    } catch (e) {
         console.log(e); // Или записать ошибку в консоль браузера
-        }
+    }
     });
 </script>             
 <!-- START OF ALTCRAFT PIXEL CODE !-->
@@ -26,4 +25,3 @@
 <!-- END OF ALTCRAFT PIXEL CODE !-->
 </body>
 </html>
-0 comments on commit 42f6c19
